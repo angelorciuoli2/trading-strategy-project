@@ -2,9 +2,9 @@ Note: These datasets are minute-tick rather than second-tick due to the large fi
 
 These datasets contains data (Oct 25 – Dec 13\) for Apple, Amazon, and Tesla:
 
-AAPL\_10-25\_12-13  
-AMZN\_10-25\_12-13  
-TSLA\_10-25\_12-13
+*AAPL\_10-25\_12-13  
+*AMZN\_10-25\_12-13  
+*TSLA\_10-25\_12-13
 
 TECH\_11-19\_12-13
 

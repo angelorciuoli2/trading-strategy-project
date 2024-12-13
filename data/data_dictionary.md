@@ -6,9 +6,11 @@ AAPL\_10-25\_12-13
 AMZN\_10-25\_12-13  
 TSLA\_10-25\_12-13
 
-TECH\_11-19\_12-13
+
 
 This dataset contains data (Nov 19 – Dec 13\) for the following companies:
+
+TECH\_11-19\_12-13
 
 1\. ADBE: Adobe  
 2\. AMD: Advanced Micro Devices  

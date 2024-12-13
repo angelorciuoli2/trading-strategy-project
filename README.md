@@ -2,7 +2,7 @@
 
 This project explores using machine learning techniques to generate returns in equity markets. The initial focus is on high-frequency trading (HFT) data simulations, but the framework can be adapted to daily market data as well. The goal is to develop a model capable of predicting short-term price movements to inform trading decisions.
 
-**1. Data Acquisition and Preprocessing:**
+### **1. Data Acquisition and Preprocessing:**
 
 • Data Source: Free, minute-tick intraday stock data was initially extracted from Yahoo Finance (limited to 5 business days).
 

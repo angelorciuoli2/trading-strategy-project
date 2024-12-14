@@ -48,6 +48,9 @@ class MovingAverageStrategy:
             self.df.at[self.df.index[i], 'PnL'] = capital + (shares * price) - self.initial_capital
 
         pnl = self.df['PnL'].iloc[-1]
+
+        self.df_final = self.df # Intializing df_final
+
         if pnl > self.final_pnl:
             self.final_pnl = pnl
             self.df_final = self.df

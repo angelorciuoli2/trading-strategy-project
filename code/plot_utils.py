@@ -3,7 +3,7 @@ import numpy as np
 
 class PlotUtils:
     @staticmethod
-    def xtick_labels(ax, df, num_labels=12):
+    def xtick_labels(ax, df, num_labels=7):
         unique_dates = df['Datetime'].dt.date.unique()
         if len(unique_dates) > num_labels:
             selected_dates = unique_dates[::len(unique_dates) // num_labels]
@@ -16,15 +16,15 @@ class PlotUtils:
 
     @staticmethod
     def trading_plot(df, company):
-        fig, ax = plt.subplots(figsize=(16, 8))
+        fig, ax = plt.subplots(figsize=(12, 6))
         ax.plot(df.index, df[company], color='blue', label='_nolegend_')
         ax.scatter(df.index[df['Action'] == 'BUY'], df.loc[df['Action'] == 'BUY', company], color='#39FF14', label='BUY', zorder=5, s=75)
         ax.scatter(df.index[df['Action'] == 'SELL'], df.loc[df['Action'] == 'SELL', company], color='#FF073A', label='SELL', zorder=5, s=75)
 
-        ax.set_title(f"{company} Stock Price", fontsize=26, fontweight='bold')
+        ax.set_title(f"{company}", fontsize=26, fontweight='bold')
         pnl_ratio = f"{round((df['PnL'].iloc[-1] / df['Liquid Capital'].iloc[0]) * 100, 2)}%"
         stock_price_growth = f"{round(((df[company].iloc[-1] - df[company].iloc[0]) / df[company].iloc[0]) * 100, 2)}%"
-        ax.legend(title=f"PnL Return: {pnl_ratio}\nStock Price Growth: {stock_price_growth}", loc='best', prop={'size': 16}, title_fontsize=16, facecolor="#aaaaaa")
+        ax.legend(title=f"PnL Return: {pnl_ratio}\nStock Price Growth: {stock_price_growth}", loc='upper left', bbox_to_anchor=(1.05, 1), prop={'size': 12}, title_fontsize=16, facecolor="#aaaaaa")
 
         PlotUtils.xtick_labels(ax, df)
         ax.tick_params(axis='y', which='major', labelsize=14)

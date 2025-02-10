@@ -6,7 +6,7 @@ import pandas as pd
 class OpenAIExtractor:
     def __init__(self, api_key):
         
-        self.api_key = "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"
+        self.api_key = "This is a secret."
         os.environ['OPENAI_API_KEY'] = self.api_key  # Set API key in environment
 
         # Define the system prompt for structured extraction
